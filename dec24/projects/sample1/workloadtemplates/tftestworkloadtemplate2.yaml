@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: WorkloadTemplate
+metadata:
+  name: tftestworkloadtemplate2
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      chartName: mychart
+      chartVersion: 0.1.4
+      repository: default-stable-helm
+      valuesRef:
+        repository: kevin-workload-template
+        revision: main
+        valuesPaths:
+        - name: chart_values.yaml
+    options:
+      timeout: 0s
+    type: Helm

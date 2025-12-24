@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    rafay.dev/lineage: '{"filePath":"projects/sample1/addons/test-addon1.yaml","repoUrl":"https://github.com/kevin-rafay/kevin-test.git","structuredFolder":"annotations-test"}'
+  name: test-addon1
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/kevin-rafay/testnetworkpolicy/refs/heads/main/test/busybox-replica2.yaml
+    type: Yaml
+  namespace: testnamespace1
+  sharing: {}
+  version: v1
+  versionState: active

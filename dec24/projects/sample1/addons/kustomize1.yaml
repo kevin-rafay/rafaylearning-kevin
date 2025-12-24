@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    rafay.dev/lineage: '{"filePath":"projects/sample1/addons/kustomize1.yaml","repoUrl":"https://github.com/kevin-rafay/kevin-test.git","structuredFolder":"annotations-test"}'
+  name: kustomize1
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      file:
+        name: file://artifacts/kustomize1/my-kustomize.zip
+    type: Kustomize
+  namespace: testnamespace1
+  sharing: {}
+  version: v1
+  versionState: active

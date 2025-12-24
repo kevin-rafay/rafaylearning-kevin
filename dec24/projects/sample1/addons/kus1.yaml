@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    rafay.dev/lineage: '{"filePath":"projects/sample1/addons/kus1.yaml","repoUrl":"https://github.com/kevin-rafay/kevin-test.git","structuredFolder":"annotations-test"}'
+  name: kus1
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      directory: examples
+      path: examples/loadHttp
+      repository: kevin-test-repo
+      revision: master
+    type: Kustomize
+  namespace: testnamespace1
+  sharing: {}
+  version: v1
+  versionState: active

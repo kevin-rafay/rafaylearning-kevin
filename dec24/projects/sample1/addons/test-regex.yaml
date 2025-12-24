@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: test-regex
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/kevin-rafay/testnetworkpolicy/refs/heads/main/test/busybox-replica2.yaml
+    type: Yaml
+  namespace: tfdemonamespace1
+  sharing: {}
+  version: '*'
+  versionState: active

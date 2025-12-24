@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: draft-addon
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      file:
+        name: file://artifacts/draft-addon/multibases2.zip
+      path: dev
+    type: Kustomize
+  namespace: default
+  sharing:
+    enabled: true
+    projects:
+    - name: defaultproject
+  version: v3
+  versionState: active

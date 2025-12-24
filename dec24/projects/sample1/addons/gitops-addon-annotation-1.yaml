@@ -1,0 +1,81 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    123numericKey: startsWithNumber
+    arabicText: مرحبا كيف حالك
+    base64Sample: SGVsbG8gV29ybGQ=
+    booleanString: "true"
+    camelCaseKeyTest: camelValue
+    carriageReturn: "Test\rValue"
+    chineseSimplified: 你好，你怎么样？
+    comboWhitespace: "A\tB\nC\rD"
+    cssInjection: body{background:red;}
+    currencyTest: $100, ₹500, €75, ¥2000
+    emailExample: test.user+qa@example.co.in
+    emojiMulti: "\U0001F525\U0001F680✨\U0001F31F\U0001F4A5"
+    emojiSimple: "\U0001F642"
+    emojiWithSkinTone: "\U0001F44D\U0001F3FD\U0001F44F\U0001F3FB\U0001F64F\U0001F3FF"
+    empty: ""
+    filePathUnix: /usr/local/bin/run.sh
+    filePathWindows: C:\\Program Files\\Test\\run.exe
+    floatValue: "98.76"
+    greekText: Γειά σου, πώς είσαι;
+    hebrewText: שלום מה שלומך
+    hindiText: नमस्ते, आप कैसे हैं?
+    htmlSnippet: <div>Hello & Welcome</div>
+    japaneseText: こんにちは、元気ですか？
+    jsonArrayLike: '[1, 2, 3, 4]'
+    jsonEscapes: '{"name":"Kevin"}'
+    key-with-dashes: value-123
+    key.with.dots: dot.value
+    key_with_underscores: value_test
+    koreanText: 안녕하세요, 잘 지내세요?
+    longText: This is a long text field used for testing multi-sentence data. It includes
+      punctuation, numbers (123), and unicode ❤️.
+    markdown: '**bold** _italic_ `code`'
+    mathUnicode: ∑ ∫ ∆ µ ≥ ≤ ≈
+    multipleSpaces: '     '
+    newlineValue: |-
+      Line1
+      Line2
+    nonBreakingSpace: Hello World
+    nullString: "null"
+    numbersOnly: "1234567890"
+    punctuationOnly: '. , ; : ! ? '' " - -- ---'
+    rightToLeftMark: abc‎def
+    russianText: Привет как дела
+    scriptTag: <script>alert('XSS')</script>
+    simpleText: hello world
+    spaceValue: ' '
+    specialChars1: '!@#$%^&*()'
+    specialChars2: '`~_-+=[]{}|;:''\",.<>/?'
+    sqlInjection1: '''; DROP TABLE users; --'
+    sqlInjection2: '" OR ""="'
+    sqlInjection3: 'admin'' -- '
+    tabValue: "\tTabbedData"
+    tamilText: வணக்கம், எப்படி இருக்கிறீர்கள்?
+    thaiText: สวัสดี คุณสบายดีไหม
+    unicodeSymbols: © ® ™ ∞ ≠ √ π
+    urlExample: https://example.com
+    urlWithFragment: https://abc.com/page#section2
+    urlWithParams: https://test.com?q=hello&lang=en
+    uuidSample: 550e8400-e29b-41d4-a716-446655440000
+    veryLongValue: A.repeat(500)
+    weirdUnicodeMix: ĀčęĖįŠųŽøåßöğüşİı
+    xmlLike: <root><child>value</child></root>
+    xmlSnippet: <tag>value</tag>
+    xssPayload: <img src=x onerror=alert(1)>
+    zeroWidthSpace: Hello​World
+  name: gitops-addon-annotation-1
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/krishnarafay/testnetworkpolicy/refs/heads/main/test/busybox-replica4.yaml
+    type: Yaml
+  namespace: test-ns-kevin
+  sharing: {}
+  version: v1
+  versionState: active
